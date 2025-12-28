@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./popup.css" />
+        <title>YouTube Modifier</title>
+    </head>
+    <body>
+        <h1>YouTube Modifier</h1>
+
+        <div class="feature">
+            <p>Supprimer les Shorts</p>
+            <div class="toggle" id="toggle-shorts"></div>
+        </div>
+
+        <div class="feature">
+            <p>Ajouter le bouton du lecteur réduit</p>
+            <div class="toggle" id="toggle-reduced-reader"></div>
+        </div>
+
+        <div class="feature">
+            <p>Test de toggle switch</p>
+            <div class="toggle-switch">
+                <input class="toggle-input" id="toggle" type="checkbox" />
+                <label class="toggle-label" for="toggle"></label>
+            </div>
+        </div>
+
+        <div class="status">
+            Rechargez la page pour appliquer les changements
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>

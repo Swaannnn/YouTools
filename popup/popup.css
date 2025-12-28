@@ -1,0 +1,104 @@
+:root {
+    --color-main-red: #ff0033;
+    --color-main-black: #212121;
+    --color-main-white: #ffffff;
+
+    --background-black: #0f0f0f;
+    --background-black2: #272727;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+
+    background-color: var(--background-black);
+    color: var(--color-main-white);
+
+    width: 450px;
+}
+
+.feature {
+    background-color: var(--background-black2);
+    border-radius: 8px;
+    padding: 4px 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feature p {
+    font-size: 14px;
+}
+
+.toggle {
+    position: relative;
+    width: 50px;
+    height: 26px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: #4ade80;
+}
+
+.toggle::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+}
+
+.status {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* custom toggle switch */
+
+.toggle-switch {
+    position: relative;
+    width: 48px;
+    height: 24px;
+}
+
+.toggle-switch .toggle-input {
+    display: none;
+}
+
+.toggle-switch .toggle-label {
+    position: absolute;
+    width: 48px;
+    height: 24px;
+    background-color: var(--color-main-black);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.toggle-switch .toggle-label::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    background-color: var(--color-main-white);
+    transition: transform 0.25s;
+}
+
+.toggle-switch .toggle-input:checked + .toggle-label {
+    background-color: var(--background-black);
+}
+
+.toggle-switch .toggle-input:checked + .toggle-label::before {
+    transform: translateX(24px);
+}
