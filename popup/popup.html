@@ -9,27 +9,38 @@
     <body>
         <h1>YouTube Modifier</h1>
 
-        <div class="feature">
-            <p>Supprimer les Shorts</p>
-            <div class="toggle" id="toggle-shorts"></div>
-        </div>
+        <div class="container">
+            <div class="feature">
+                <p>Supprimer les Shorts</p>
+                <div class="toggle-switch">
+                    <input
+                        class="toggle-input"
+                        id="toggle-shorts"
+                        type="checkbox"
+                    />
+                    <label class="toggle-label" for="toggle-shorts"></label>
+                </div>
+            </div>
 
-        <div class="feature">
-            <p>Ajouter le bouton du lecteur réduit</p>
-            <div class="toggle" id="toggle-reduced-reader"></div>
-        </div>
-
-        <div class="feature">
-            <p>Test de toggle switch</p>
-            <div class="toggle-switch">
-                <input class="toggle-input" id="toggle" type="checkbox" />
-                <label class="toggle-label" for="toggle"></label>
+            <div class="feature">
+                <p>Ajouter le bouton du lecteur réduit</p>
+                <div class="toggle-switch">
+                    <input
+                        class="toggle-input"
+                        id="toggle-reduced-reader"
+                        type="checkbox"
+                    />
+                    <label
+                        class="toggle-label"
+                        for="toggle-reduced-reader"
+                    ></label>
+                </div>
             </div>
         </div>
 
-        <div class="status">
+        <!-- <div class="status">
             Rechargez la page pour appliquer les changements
-        </div>
+        </div> -->
 
         <script src="popup.js"></script>
     </body>

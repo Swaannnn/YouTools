@@ -6,18 +6,17 @@ chrome.storage.sync.get(['removeShorts', 'addReducedReader'], (result) => {
     )
 
     if (result.removeShorts) {
-        shortsToggle.classList.add('active')
+        shortsToggle.checked = true
     }
 
     if (result.addReducedReader) {
-        readucedReaderToggle.classList.add('active')
+        readucedReaderToggle.checked = true
     }
 })
 
 // Toggle pour supprimer les Shorts
-document.getElementById('toggle-shorts').addEventListener('click', function () {
-    this.classList.toggle('active')
-    const isActive = this.classList.contains('active')
+document.getElementById('toggle-shorts').addEventListener('change', function () {
+    const isActive = this.checked
 
     chrome.storage.sync.set({ removeShorts: isActive }, () => {
         chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -34,9 +33,8 @@ document.getElementById('toggle-shorts').addEventListener('click', function () {
 // Toggle pour ajouter le bouton de lecteur réduit
 document
     .getElementById('toggle-reduced-reader')
-    .addEventListener('click', function () {
-        this.classList.toggle('active')
-        const isActive = this.classList.contains('active')
+    .addEventListener('change', function () {
+        const isActive = this.checked
 
         chrome.storage.sync.set({ addReducedReader: isActive }, () => {
             chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {

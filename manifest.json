@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "YouTube Modifier",
+    "name": "YouTools",
     "version": "1.0",
-    "description": "Modifie des éléments sur YouTube",
+    "description": "adds extra features and improvements to YouTube.",
     "permissions": ["storage", "activeTab"],
     "host_permissions": ["*://www.youtube.com/*"],
     "action": {
